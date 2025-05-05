@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
+
+  p {
+    @apply font-normal;
+  }
+
+  a {
+    @apply text-blue-500 cursor-pointer;
+  }
+}
+
+/* Tùy chỉnh các nút dots */
+.slider .slick-dots li button:before {
+  @apply text-gray-400 opacity-100 text-lg; /* Sử dụng lớp tiện ích của Tailwind */
+}
+
+.slider .slick-dots li.slick-active button:before {
+  @apply text-[#0071BC]; /* Màu custom trong Tailwind */
+}
+
+.slider .slick-dots {
+  bottom: -50px !important;
+}
+
+.slider .slick-dots li button {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+/* Thay đổi toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+  width: 8px; /* Độ rộng của thanh cuộn dọc */
+  height: 8px; /* Độ cao của thanh cuộn ngang */
+}
+
+/* Thay đổi phần track của thanh cuộn */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của track */
+  border-radius: 10px; /* Góc bo tròn */
+}
+
+/* Thay đổi phần thumb (tay cầm) của thanh cuộn */
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* Màu của thumb */
+  border-radius: 10px; /* Góc bo tròn */
+}
+
+/* Thêm hiệu ứng khi hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1; /* Màu của thumb khi hover */
+}
